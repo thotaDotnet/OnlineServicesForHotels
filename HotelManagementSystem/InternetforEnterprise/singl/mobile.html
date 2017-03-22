@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<title>mobile</title>
+</html>
+<body>
+	
+	
+		<br>
+		<label for="securityQuestion">Security question:</label> 
+			 
+		<select name="securityQuestion" id="dropDown">Security question:
+		<option selected="" value="Default" id="idDefault">Please select a question:</option>
+		<option value="color" id="idColor">What is your favuorite color</option>
+		<option value="place" id="idBirthPlace">What is your birth place</option>
+		<option value="game" id="idFavGame">What is your favourite game</option>
+		</select>
+		<br><br>
+		<label for="answer">Answer:</label> 
+		<input type="text" id="idAnswer" size="20"> 
+		<br>
+		<br>
+	<input type="button" id="securityButton" value="securityCheck" onClick="securityValidation()">
+</body>
+
+<script>
+
+	function securityValidation(){
+		
+		var e = document.getElementById("dropDown");
+		var optionSelIndex = e.options[e.selectedIndex].value;
+		
+        var optionSelectedText = e.options[e.selectedIndex].text;
+		
+        if (optionSelIndex == "color") {
+            
+			var getAnswerColor = document.getElementById("idAnswer").value;
+			window.alert("The selected color is:"+ getAnswerColor);
+        }
+		else if(optionSelIndex == "place"){
+			var getAnswerPlace = document.getElementById("idAnswer").value;
+			window.alert("The selected birth place is:"+ getAnswerPlace);
+		}
+		else if(optionSelIndex == "game"){
+			var getAnswerGame = document.getElementById("idAnswer").value;
+			window.alert("The selected birth place is:"+ getAnswerGame);	
+		}
+        else if(optionSelIndex == "Default"){
+            alert("Please select a question");
+        }
+		
+		else {
+			alert("the form is submitted successfully")
+		}
+		
+	}
+	
+	    
+</script>
+	
+</script>

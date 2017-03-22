@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="srtle.css">
+		<script>
+			function customerValidation(){
+				var name = document.getElementById("customerName").value;
+				var mobile = document.getElementById("customerMobile").value;
+				var date = document.getElementById("customerDate").value;
+				var time = document.getElementById("customerTime").value;
+				
+				if(name_validation(name)){
+					if(mobile_validation(mobile)){
+						if(time_Validation(time)){
+							
+						}
+					}
+				}
+				function name_validation(name){
+					var letters_first = (/^[A-Za-z]+$/); 
+					if(name.match(letters_first))  
+					{  
+						return true;  
+					}  
+					else  
+					{  
+						alert("Please enter all the characters as alpabets in FirstName field");  
+						return false;  
+					}  
+				}  //end function name_validation
+				
+				function mobile_validation(mobile){
+					if(!isNaN(mobile)){
+						mobile_length = mobile.length;
+						
+						if(mobile_length == 10){
+							
+							
+							return true;
+						}
+						
+						else{
+							alert("Mobile number can be only 10 numbers");
+						}
+					
+						
+							return true;
+						
+					} else{
+						alert("Please enter numbers only");
+						return false;
+					} //end if
+				} //end function mobile_validation
+				
+				function time_Validation(time){
+					 // regular expression to match required time format
+						time_expr = /^(\d{1,2}):(\d{2})?$/;
+						
+						if(time_value= time.match(time_expr)){
+								
+								
+								if(time_value[1] < 0 || time_value[1] > 12){
+									alert("Please enter the valid hours " + time_value[1]);
+									return false;
+								} 
+								
+								if(time_value[2] < 0 || time_value[2] > 59){
+									alert("Please enter the valid minutes " + time_value[2]);
+									return false;
+								}
+								
+								alert("Time field is validated");
+								alert("Form is successfully submitted and your booking is made");
+								return true;
+						} //end if
+				}//end function time_Validation
+				
+			}
+		</script>
+		 
+	</head>
+	<body>
+		<div class="container">
+		<header>
+			<img src="kansascity _final.jpg" alt="logo" class="logo">
+			<h1>Online Services in Kansas city</h1>
+			<nav class="pag_nav">
+				<ul>
+					<li><a href="practice.html" >HOME</a></li>
+					<li><a href="aboutUs.html" >About us</a></li>
+					<!--<li><a href="#" >product</a></li>-->
+					<li><a href="contactUs.html" >Contact us</a></li>
+				</ul>
+			</nav>
+			<div class="clear"></div>
+			<nav class="head_nav">
+			
+			
+			</nav>
+		</header>
+		<hr/>
+		
+		<h2 style="text-align:center; color: blue">Ruchi Resturant</h2>
+			
+		<br>	
+			<fieldset style="width:200px; height: 500px; float:left; margin-left:20px; background-color:white; border-left:5px">
+				<div style="margin:5px">
+					<strong><p style="text-apgn:left;font-size:15px">PHONE NUMBER</p></strong><br>
+					<p>913 291 6222</p>
+					<p>913 291 8222</p><br>
+				</div>
+				<div style="margin:5px">
+					<strong><p style="text-apgn:left;font-size:15px">ADDRESS</p></strong>
+					<p>8562 W 133rd St, Overland Park, KS 66213</p><br>
+					
+				</div>
+				<b style="font-size:15px;">CUSINE</b>
+				<p>North Indian, South Indian</p><br>
+				
+				<b style="font-size:15px;">OPENING HOURS</b>
+				<p>11:00AM-3:00 PM <br>5:00PM-10:00PM</p><br>
+				
+				<b style="font-size:15px">HIGHLIGHTS</b>
+				
+					<p>LUNCH</p>
+					<p>GOAT BIRIYANI</p>
+					<p>DINNER</p>
+					<p>KEBABS</p>
+					<p>HOME DELIVERY</p>
+					<p>FREE PARKING</p>
+					<p>BREAK FAST</p>
+					<br><br>
+			</fieldset>
+			<fieldset style="width:770px; height: 500px;  background-color:white; border-right:5px">
+				<br>
+				<p style="margin-left:10px">Counter-serve Indian chain for biryani, kebabs, curries & more, including lots of veggie options.</p>
+				<br>
+				<p style="margin-left:10px">You can book your table by calling to the above phone numbers</p>
+				<br>
+				<p style="margin-left:10px">You can book your table in Online also by filling the below details:</p>
+				<br>
+				<strong><p style="margin-left:10px">Buffet will cost 12$ on week days and on Weekends it will cost 15$</p></strong>
+				<br>
+				<div style="border: 1px solid blue; width: 300px; float: left; margin-left:30px; background-color:white" >
+					<table>
+						<tr>
+							<td colspan="2" style="text-align:center; "><strong>Book Online</strong></td>
+						</tr>
+						<tr>
+							<td style="text-align:right">Name:</td>
+							<td><input type="text" id="customerName"style="height: 20px;"></td>			
+						</tr>
+						<tr style="height:10px">
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td style="text-align:right">Mobile Number:</td>
+							<td><input type="text" id="customerMobile"style="height: 20px;"></td>			
+						</tr>
+						<tr style="height:10px">
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td style="text-align:right">Date:</td>
+							<td><input type="date" id="customerDate"style="height: 20px;"></td>			
+						</tr>
+						<tr style="height:10px">
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td style="text-align:right">Time:</td>
+							<td><input type="text" id="customerTime"style="height: 20px;" ></td>			
+						</tr>
+						<tr style="height:10px">
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan = "2" ><input type="Button" id="customerButton"value="Book Online" onClick="customerValidation()"></td>
+						</tr>
+					</table>
+				</div>
+				
+				<div style="border: 1px solid blue; width: 300px; float: right; margin-right: 30px;  background-color:white" >
+					<img src="images/resturant_3.jpg" style="height:180px; width: 300px"/>
+				</div>
+				<br>
+				
+
+
+			</fieldset>
+			
+			
+			
+			
+	
+			
+		<footer class="foot">
+			&copy; copyrigths University of Central Missouri<br>
+								Chipman Road, LeeSummit <br>
+								Missouri
+								
+		</footer>
+		</div>
+	</body>
+</html>

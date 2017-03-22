@@ -1,0 +1,298 @@
+ <!DOCTYPE html>
+ <html>
+	<head>
+		<title> Form </title>
+	</head>
+	<body>
+		<form>
+		<label>UserName: </label>
+		<input type="text" id="idUsername" > <br>
+		<br>	
+	
+		<label for="firstName">FirstName:</label> 
+		
+		<input type="text" id = "idfirstName" size="20"> 
+		<br>
+		<br>	
+		<label for="lastName">LastName:</label> 
+		<input type="text" id="idlastName" size="20"> 
+		<br>
+		<br>
+		<label for="dateOfBirth">Date of Birth:</label> 
+		<input type="date" name="dateOfBirth"/> 
+		<br>
+		<br>
+				
+		<label >Gender: </label>
+		<input type="radio" id="idMaleGender" value="male">Male
+		<input type="radio" id="idFemaleGender" value="female">Female
+		<br/>
+		<br/>
+		<label for="mobileNumbers">Mobile Number:</label>  
+		<input type="text" id="idMobileNumber"> 
+		<br/>
+		<br/>
+		<label for="email">Email:</label> 
+		<input type="email" id="idEmail"/> 
+		<br/>
+		<br/>
+		<label for="member">Member:</label> 
+		<input type="checkbox" id="idCustomer" value="vcustomer">Customer
+		<input type="checkbox" id="idEmployee" value="vemploye">Employee
+		<br/>
+		<br/>
+		<label for="password">Password:</label> 
+		<input type="password" id="idPassword" size="20"> 
+		<br>
+		<br>
+		<label for="confirmPassword"> Confirm Password:</label> 
+		<input type="password" id="idConfirmPassword" size="20"> 
+		<br>
+		<br>
+		<label for="securityQuestion">Security question:</label> 
+			 
+		<select name="securityQuestion" id="dropDown">Security question:
+		<option selected="" value="Default" id="idDefault">Please select a question:</option>
+		<option value="color" id="idColor">What is your favuorite color</option>
+		<option value="place" id="idBirthPlace">What is your birth place</option>
+		<option value="game" id="idFavGame">What is your favourite game</option>
+		</select>
+		<br>
+		<br>
+		<label for="answer">Answer:</label> 
+		<input type="text" name="answer"  id="idAnswer" size="20"> 
+		<br>
+		<br>
+					 
+		<p id = "messages"></p>
+		<input type="button" id="submitButton" value="Submit" onClick = "formValidation()">
+		<input type="Reset"  id="idReset" value="Cancel">
+		
+		</form>
+	</body>
+	<script>
+		
+		function formValidation(){
+			var userName = document.getElementById("idUsername").value;
+			var firstName = document.getElementById("idfirstName").value;
+			var lastName = document.getElementById("idlastName").value;
+			var dob = document.getElementById("");
+			var maleGender = document.getElementById("idMaleGender");
+			var femaleGender = document.getElementById("idFemaleGender");
+			var mobileNumber = document.getElementById("idMobileNumber").value;
+			var email = document.getElementById("idEmail").value;
+			var customerMember = document.getElementById("idCustomer");
+			var employeeMember = document.getElementById("idEmployee");
+			var password = document.getElementById("idPassword").value;
+			var confirmPassword = document.getElementById("idConfirmPassword").value;
+			
+			
+			if(userName_validation(userName,5,12)){
+				if(firstName_validation(firstName)){
+					if(lastName_validation(lastName)){
+						if(gender_validation(maleGender,femaleGender)){
+							if(mobile_validation(mobileNumber)){
+								if(email_validation(email)){
+										if(member_validaiton( customerMember,employeeMember)){
+											if(password_validation()){
+												if(securityValidation()){
+													if(securityAnswerValidation()){
+													
+													}
+												}
+											}
+											
+										}
+									}
+								}
+							}
+						}
+					}
+				
+				}	
+			
+			return false;
+			}
+			
+				function userName_validation(userName,mx,my){
+					var userName_length = userName.length; 
+					if (userName_length == 0 || userName_length >= my || userName_length < mx)  
+						{  
+							alert("User Id should not be empty / length be between "+mx+" to "+my);  
+						
+							return false;  
+						}  
+						return true;  
+
+					} //end function userName_validation
+					
+				function firstName_validation(firstName){
+					var letters_first = (/^[A-Za-z]+$/); 
+					if(firstName.match(letters_first))  
+					{  
+						return true;  
+					}  
+					else  
+					{  
+						alert("Please enter all the characters as alpabets in FirstName field");  
+						return false;  
+					}  
+				}  //end function userName_validation
+				
+				function lastName_validation(lastName){
+					var letters_last = (/^[A-Za-z]+$/);
+					if(lastName.match(letters_last))
+					{
+						return true;
+					}
+					else 
+					{
+						alert("Please enter all the characters as alphabets in LastName field");
+					}
+				} // end function lastName_validation
+				
+				
+				function gender_validation(maleGender,femaleGender){
+					var x = 0;
+					if(maleGender.checked){
+						x++;
+					}
+					if(femaleGender.checked){
+						x++;
+					}
+					if(x == 0){
+						window.alert("Please check the gender field");
+						return false;
+					}
+					
+					else{
+						
+						return true;
+					}
+				
+				}//end function gender_validation
+				
+				function mobile_validation(mobileNumber){
+					
+					
+					if(!isNaN(mobileNumber))
+					{
+						mobileNumber_length = mobileNumber.length;
+						if(mobileNumber_length == 10)
+						{
+							return true;
+						}
+						else
+						{
+						window.alert("Please enter 10 numbers in the text field");
+						}
+					return true;
+					}
+					else
+					{
+					window.alert("Please enter numbers only");
+					return false;
+					}
+					
+				} //end function mobile_validation
+				
+				function email_validation(email){
+					var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+					if(email.match(mailformat)){
+						return true;
+					}else{
+						window.alert("Please enter the valid email address");
+						return false;
+					}
+					
+				} //end function email_validation
+				
+				function member_validaiton(customerMember,employeeMember){
+					var y = 0;
+					if(customerMember.checked){
+						y++;
+					}
+					if(employeeMember.checked){
+						y++;
+					}
+					if(y == 0){
+						window.alert("Please check the member field");
+						return false;
+					}
+					
+					else{
+						
+						return true;
+					}
+				
+				} //end function member_validaiton
+				
+				
+				function password_validation(){
+					var password = document.getElementById("idPassword").value;
+					var confirmPassword = document.getElementById("idConfirmPassword").value;
+					var confirmPassword = document.getElementById("idConfirmPassword").value;
+		
+					var password_length = password.length;
+					var confirmPassword_length = confirmPassword.length;
+		
+					if(password_length != 0 || password_length >= 8 ){
+						if(password == confirmPassword){
+						return true;
+						}else {
+							window.alert("password and confirm passwrod should be same");
+						}
+					} else {
+					window.alert("password field should not be empty or password field should have a minimum of 8 characters");
+					}
+		
+				}//end function password_validation
+				
+				function securityValidation(){
+		
+					var e = document.getElementById("dropDown");
+					var optionSelIndex = e.options[e.selectedIndex].value;
+				
+					var optionSelectedText = e.options[e.selectedIndex].text;
+				
+					if (optionSelIndex == "color") {
+					
+						var getAnswerColor = document.getElementById("idAnswer").value;
+						return true;
+					}
+					else if(optionSelIndex == "place"){
+						var getAnswerPlace = document.getElementById("idAnswer").value;
+						return true;
+					}
+					else if(optionSelIndex == "game"){
+						var getAnswerGame = document.getElementById("idAnswer").value;
+						return true;
+					}
+					else if(optionSelIndex == "Default"){
+						alert("Please select a question");
+						return false;
+					}
+				
+					else{
+						return true;
+					}
+				} //end function securityValidation
+
+				function securityAnswerValidation(){
+					
+					var securityAnswer = document.getElementById("idAnswer").value;
+					
+					if(securityAnswer == ""){
+					
+						window.alert("Please fill the answer field also:");
+						
+					} else {
+					
+						window.alert("The form is submitted successfully")
+						
+					}
+				} //end function securityAnswerValidation
+				
+				
+		</script>
+ </html>

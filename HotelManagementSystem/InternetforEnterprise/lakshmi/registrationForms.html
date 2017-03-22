@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script src = "formValidation.js"></script>
+		<link rel="stylesheet" href="srtle.css">
+		
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<img src="kansascity _final.jpg" alt="logo" class="logo">
+				
+				<h1>Online Services in Kansas city</h1>
+				<nav class="pag_nav">
+					<ul>
+						 <a href="practice.html" >HOME</a> 
+						 <a href="aboutUs.html" >About us</a> 
+						<!-- <a href="#" >product</a> -->
+						 <a href="contactUs.html" >Contact us</a> 
+					</ul>
+				</nav>
+				<div class="clear"></div>
+			</header>
+		
+			<section class="page_top">
+				<marquee class="sliding">"We take care of your needs..!"</marquee>
+			</section>
+		
+			
+			<form name="registration" class="registrationForm">
+				<h2>Please fill in the details to register:</h2><br>
+				
+				<p> Use the Tab button to switch to the other fields:</p><br>
+				
+				<br>	 
+				<label>UserName: </label>
+				<input type="text" id="idUsername" > <br>
+				<br>	
+
+				<label for="firstName">FirstName:</label> 
+				
+				<input type="text" id = "idfirstName" size="20"> 
+				<br>
+				<br>	
+				<label for="lastName">LastName:</label> 
+				<input type="text" id="idlastName" size="20"> 
+				<br>
+				<br>
+				<label for="dateOfBirth">Date of Birth:</label> 
+				<input type="date" name="dateOfBirth"/> 
+				<br> 
+				<br>
+						
+				<label >Gender: </label>
+				<input type="radio" id="idMaleGender" value="male">Male
+				<input type="radio" id="idFemaleGender" value="female">Female
+				<br/>
+				<br/>
+				<label for="mobileNumbers">Mobile Number:</label>  
+				<input type="text" id="idMobileNumber"> 
+				<br/>
+				<br/>
+				<label for="email">Email:</label> 
+				<input type="email" id="idEmail"/> 
+				<br/>
+				<br/>
+				<label for="member">Member:</label> 
+				<input type="checkbox" id="idCustomer" value="vcustomer">Customer
+				<input type="checkbox" id="idEmployee" value="vemploye">Employee
+				<br/>
+				<br/>
+				<label for="password">Password:</label> 
+				<input type="password" id="idPassword" size="20"> 
+				<br>
+				<br>
+				<label for="confirmPassword"> Confirm Password:</label> 
+				<input type="password" id="idConfirmPassword" size="20"> 
+				<br>
+				<br>
+				<label for="securityQuestion">Security question:</label> 
+					 
+				<select name="securityQuestion" id="dropDown">Security question:
+				<option selected="" value="Default" id="idDefault">Please select a question:</option>
+				<option value="color" id="idColor">What is your favuorite color</option>
+				<option value="place" id="idBirthPlace">What is your birth place</option>
+				<option value="game" id="idFavGame">What is your favourite game</option>
+				</select>
+				<br>
+				<br>
+				<label for="answer">Answer:</label> 
+				<input type="text" name="answer"  id="idAnswer" size="20"> 
+				<br>
+				<br>
+				<br>
+				<p id = "messages"></p>
+				&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+				<input type="button" id="submitButton" value="Submit" onClick = "formValidation()">
+				&nbsp &nbsp &nbsp &nbsp &nbsp
+				<input type="Reset"  id="idReset" value="Cancel">
+						   
+			</form>
+			<br><br>
+			<hr/>
+		<footer class="foot">
+			&copy; copyrigths University of Central Missouri<br>
+								Chipman Road, LeeSummit <br>
+								Missouri
+								
+		</footer>
+		
+		</div>	
+	
+	</body>
+</html>

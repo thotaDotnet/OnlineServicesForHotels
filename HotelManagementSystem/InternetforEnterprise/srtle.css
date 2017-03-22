@@ -1,0 +1,237 @@
+/**{	padding:0px;
+	margin:0px;
+	list-style-type:none;
+}
+
+.container{	width:1000px;
+			border:1px solid grey;
+			}
+.logo{	float:left;
+		width:125px;
+		height:125px;
+		padding-bottom:10px;
+		}			
+.pag_nav{	width:875px;
+			float:left;
+			}
+
+.pag_nav ul li{	padding:50px;
+				float:left;
+				}		
+				
+
+
+/* handle the following elements as block */ 
+
+
+   
+*{	padding:0px;
+	margin:0px auto;
+	list-style-type:none;
+}
+.container{	width:1000px;
+			border:1px solid grey;
+			}
+	/* logo display */
+   
+.logo {
+	height:125px;
+	width:125px;
+	float:left;
+	padding-bottom:10px;
+}   
+
+/* page navigation on header at top */
+
+.pag_nav {
+	width:875px;
+	float:left;
+}
+
+/* page navigation menu item */
+
+.pag_nav ul li {
+	float:left;
+	padding:50px;
+} 
+.clear{	
+		clear:both;
+}
+.sec_left {
+	float:left;
+	width:330px;
+	
+}
+body{background-color:lightgrey;}
+h1 {
+	font-size:50px;
+	text-align:center;
+	color:red;
+	}
+.head_nav{
+		text-align:right;
+		color:White;
+		font-size:20px;
+		padding-right:20px;
+		background-color:white;
+}
+.peacock{
+	width:315px;
+	height:200px;
+}
+.sec_left h5 {
+	font-size:25px;
+	text-align:center;
+}
+.sec_left div{
+	float:left;
+	width:310px;
+	border:1px solid red;
+	margin:0px 0px 5px 0px;
+	padding:5px;
+}
+.sec_middle{
+	float:left;
+	width:400px;
+}
+.sec_mid_pea1, .sec_mid_pea2, .sec_mid_pea3, .sec_mid_pea4{
+	width:195px;
+	height:120px;
+}
+.sec_middle div{
+	float:left;
+	width:400px;
+	height:483px;
+	margin:0px 0px 5px 0px;
+	border:1px solid red;
+	padding:5px;
+}
+.right_nav{
+	float:right;
+	width:247px;
+	margin-top:-20px;
+}
+/*
+.right_nav ul li{
+		float:right;
+		padding:5px;
+}*/
+.sec_right {
+	float:right;
+	width:247px;
+}
+.sec_right h2{	text-align:center;
+				color:red;
+				background-color:orange;
+				padding-top:0px;
+				}
+.sec_right div{
+	border:1px solid blue;
+	margin:0px 0px 7px 0px;
+	background-color:lightblue;
+	padding-bottom:10px;
+	padding-left:10px;
+	height:150px;
+}
+.sub_nav{	
+		float:right;
+		padding-right:56px;
+		
+}
+
+.page_top{
+		float:middle;
+		background-color:lightblue;
+		padding-left:5px;
+		padding-right:5px;
+		padding-top:5px;
+		padding-bottom:5px;
+		border: 1px solid blue;
+		
+}
+
+.sliding{
+		direction:left;
+		font-size: 25px;
+		color:red;
+}
+
+.foot{
+	clear:both;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;	
+	font-size:20px;
+	color:red;
+}
+
+/*CSS for the form validation:*/
+
+h2{
+	margin-left:70px;
+}
+/*
+form li{
+	list-style: none;
+	margin-bottom: 5px;
+}
+
+form ul li label{
+	float: left;
+	clear: left;
+	width: 100px;
+	text-align: right;
+	margin-right: 10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;  
+	font-size:14px;  
+	
+}
+
+form ul li input, select, span {  
+float: left;  
+margin-bottom: 10px;  
+}  
+
+[type="submit"] {  
+margin-left: 100px;  
+font-size:16px  
+}  
+
+[tpye="Reset"]{
+margin-left: 200px;
+font-size: 20px;
+}
+
+*/
+
+form h2{
+	margin-left: 270px;
+}
+
+form p{
+	
+	margin-left: 230px;
+	font-size: 20px;
+}
+
+form label{
+	margin-left: 300px;
+	float: left;
+	clear: left;
+	width: 100px;
+	text-align: right;
+	margin-right: 10px;
+	font-family:Verdana, Helvetica, sans-serif;  
+	font-size:14px;  
+	
+}
+
+#submitButton{  
+margin-left: 300px;  
+font-size: 20px  
+}  
+
+#idReset{
+
+font-size: 20px;
+}
